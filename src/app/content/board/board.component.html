@@ -1,8 +1,7 @@
 <div cdkDropListGroup class="content-container">
     <div>
         <h2>To do</h2>
-
-        <div cdkDropList [cdkDropListData]="data.todo" class="drop-area" (cdkDropListDropped)="drop($event)">
+        <div id="todo" cdkDropList [cdkDropListData]="data.todo" class="drop-area" (cdkDropListDropped)="drop($event)">
             @for (item of data.todo; track item) {
             <div class="card" cdkDrag>
                 <h2>{{item.title}}</h2>
@@ -13,8 +12,7 @@
 
     <div>
         <h2>In progress</h2>
-
-        <div cdkDropList [cdkDropListData]="data.inProgress" class="drop-area" (cdkDropListDropped)="drop($event)">
+        <div id="in-progress" cdkDropList [cdkDropListData]="data.inProgress" class="drop-area" (cdkDropListDropped)="drop($event)">
             @for (item of data.inProgress; track item) {
             <div class="card" cdkDrag>
                 <h2>{{item.title}}</h2>
@@ -25,8 +23,7 @@
 
     <div>
         <h2>Await feedback</h2>
-
-        <div cdkDropList [cdkDropListData]="data.awaitFeedback" class="drop-area" (cdkDropListDropped)="drop($event)">
+        <div id="await-feedback" cdkDropList [cdkDropListData]="data.awaitFeedback" class="drop-area" (cdkDropListDropped)="drop($event)">
             @for (item of data.awaitFeedback; track item) {
             <div class="card" cdkDrag>
                 <h2>{{item.title}}</h2>
@@ -37,8 +34,7 @@
 
     <div>
         <h2>Done</h2>
-
-        <div cdkDropList [cdkDropListData]="data.done" class="drop-area" (cdkDropListDropped)="drop($event)">
+        <div cdkDropList id="done" cdkDropList [cdkDropListData]="data.done" class="drop-area" (cdkDropListDropped)="drop($event)">
             @for (item of data.done; track item) {
             <div class="card" cdkDrag>
                 <h2>{{item.title}}</h2>
